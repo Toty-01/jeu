@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Document</title>
+</head>
+<body>
+<div class="game-body">
+  <button type="button" class="btn-top">
+    <img class="png-btn" src="./img/new-game.png" alt="" srcset="">
+    new game
+  </button>
+
+  <div class="play-1">
+    <h2 class="Player1">PLAYER 1</h2>
+    <p class="total-score-pl1">599</p>
+      <div class="Score-bottom">
+        <p>current</p>
+        <p class="current-score-pl1">56</p>
+      </div>
+  </div>
+
+<div class="center-game-fctns">
+  <div class="dice">
+    <img class="img-dice" src="./img/dice6.png">
+  </div>
+
+  <button type="button" class="btn" onClick="rollTheDice()">
+    <img class="png-btn" src="./img/roll-dice.png" alt="">
+    ROLL DICE
+  </button>
+
+  <button type="button" class="btn">
+    <img class="png-btn" src="./img/save.png" alt="">
+    SAVE SCORE
+  </button>
+
+  <button type="button" class="btn" onClick="editNames()">
+    EDIT NAMES
+  </button>
+</div>
+
+  <div class="play-2">
+    <h2 class="Player2">PLAYER 2</h2>
+    <p class="total-score-pl2">599</p>
+      <div class="Score-bottom">
+        <p>CURRENT</p>
+        <p class="current-score-pl2">95</p>
+      </div>
+  </div>
+</div>
+ <script src="script.js"></script> 
+</body>
+</html>
