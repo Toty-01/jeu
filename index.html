@@ -4,54 +4,60 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="jeux de dé multijoueurs">
   <link rel="stylesheet" href="style.css">
-  <title>Document</title>
+  <title>Dice game</title>
 </head>
 <body>
+
 <div class="game-body">
-  <button type="button" class="btn-top">
+
+  <button type="button" class="btn-top" id="new-game">
     <img class="png-btn" src="./img/new-game.png" alt="" srcset="">
     new game
   </button>
 
-  <div class="play-1">
-    <h2 class="Player1">PLAYER 1</h2>
-    <p class="total-score-pl1">599</p>
-      <div class="Score-bottom">
-        <p>current</p>
-        <p class="current-score-pl1">56</p>
+    <div class="game-container">
+
+        <div class="play-1">
+          <h2 class="Player1" id="select-player-1">PLAYER 1</h2>
+          <p class="total-score-pl1" id="score-player-1">0</p>
+            <div class="Score-bottom">
+              <p>current</p>
+              <p class="current-score-pl1" id="dice-result-1">0</p>
+            </div>
+        </div>
+
+      <div class="center-game-fctns">
+        <div class="dice">
+          <img class="img-dice" src="./img/dice6.png" id="img-result">
+        </div>
+
+        <button type="button" class="btn" id="roll-dice">
+          <img class="png-btn" src="./img/roll-dice.png" alt="">
+          ROLL DICE
+        </button>
+
+        <button type="button" class="btn" id="add-to-score">
+          <img class="png-btn" src="./img/save.png" alt="dé">
+          SAVE SCORE
+        </button>
+
+        <button type="button" class="btn" onClick="editNames()">
+          EDIT NAMES
+        </button>
       </div>
-  </div>
 
-<div class="center-game-fctns">
-  <div class="dice">
-    <img class="img-dice" src="./img/dice6.png">
-  </div>
-
-  <button type="button" class="btn" onClick="rollTheDice()">
-    <img class="png-btn" src="./img/roll-dice.png" alt="">
-    ROLL DICE
-  </button>
-
-  <button type="button" class="btn">
-    <img class="png-btn" src="./img/save.png" alt="">
-    SAVE SCORE
-  </button>
-
-  <button type="button" class="btn" onClick="editNames()">
-    EDIT NAMES
-  </button>
-</div>
-
-  <div class="play-2">
-    <h2 class="Player2">PLAYER 2</h2>
-    <p class="total-score-pl2">599</p>
-      <div class="Score-bottom">
-        <p>CURRENT</p>
-        <p class="current-score-pl2">95</p>
+      <div class="play-2">
+        <h2 class="Player2" id="select-player-2">PLAYER 2</h2>
+        <p class="total-score-pl2" id="score-player-2">0</p>
+          <div class="Score-bottom">
+            <p>CURRENT</p>
+            <p class="current-score-pl2"  id="dice-result-2">0</p>
+          </div>
       </div>
-  </div>
+    </div>
 </div>
- <script src="script.js"></script> 
+<script src="script.js"></script> 
 </body>
 </html>
