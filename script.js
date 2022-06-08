@@ -1,17 +1,9 @@
 // Initialisation des variables
 let playerNumber, activePlayer, scores, diceScore, inGame, currentScores;
 
-var player1 = "Player 1";
-var player2 = "Player 2";
+let player1 = "Player 1";
+let player2 = "Player 2";
 
-// Function to change the player name
-function editNames() {
-    player1 = prompt("Change Player1 name");
-    player2 = prompt("Change player2 name");
-   
-    document.querySelector("h2.Player1").innerHTML = player1;
-    document.querySelector("h2.Player2").innerHTML = player2;
-}
 // RAZ
 function newGame() {
   scores = [0, 0];
@@ -27,5 +19,84 @@ function newGame() {
   document.getElementById('dice-result-1').textContent = 0;
   document.getElementById('dice-result-2').textContent = 0;
   document.getElementById('select-player-1').style.color = 'white';
+  document.getElementById('select-player-1').style.border= 'solid blue 4px';
   document.getElementById('select-player-2').style.color = 'black';
+  document.getElementById('select-player-2').style.border= 'solid #fd4141 4px';
+}
+
+// RAZ des scores
+function resetScores() {
+  diceScore = 0;
+  currentScores = [0, 0];
+  document.getElementById('dice-result-1').textContent = 0
+  document.getElementById('dice-result-2').textContent = 0
+}
+// Récupération du boutton et de la fonction 'Nouvelle partie'
+document.getElementById('new-game').addEventListener('click', newGame);
+
+// Fonction pour changer de joueur
+function nextPlayer(){
+  if (activePlayer === 0){
+      activePlayer = 1
+      resetScores()
+      document.getElementById('select-player-1').style.color = 'black';
+      document.getElementById('select-player-1').style.border= 'solid #fd4141 4px';
+      document.getElementById('select-player-2').style.color= 'white';
+      document.getElementById('select-player-2').style.border= 'solid blue 4px';
+  } else {
+      activePlayer = 0
+      resetScores()
+      document.getElementById('select-player-2').style.color = 'black';
+      document.getElementById('select-player-2').style.border= 'solid #fd4141 4px';
+      document.getElementById('select-player-1').style.color= 'white';
+      document.getElementById('select-player-1').style.border= 'solid blue 4px';
+  }
+  return alert('Next player !')
+}
+
+// Recupration du boutton 'ROLL DICE'
+document.getElementById('roll-dice').addEventListener('click', function() {
+    if(inGame){
+        diceScore = Math.trunc(Math.random() * 6 + 1)
+        currentScores[activePlayer] = parseInt(document.getElementById('dice-result-' + playerNumber[activePlayer]).textContent, 10)
+        if (diceScore != 1){
+            document.getElementById('img-result').src = './img/dice' + diceScore + '.png'
+            currentScores[activePlayer] += diceScore
+            document.getElementById('dice-result-' + playerNumber[activePlayer]).textContent = currentScores[activePlayer]
+        } else {
+            document.getElementById('img-result').src = './img/dice' + diceScore + '.png'
+            document.getElementById('dice-result-' + playerNumber[activePlayer]).textContent = currentScores[activePlayer]
+            nextPlayer()
+        }
+    }
+})
+
+// Recuperation de 'add-to-score'
+document.getElementById('add-to-score').addEventListener('click', function(){
+    if(inGame && currentScores[activePlayer] != 0){
+        scores[activePlayer] += currentScores[activePlayer]
+        document.getElementById('score-player-' + playerNumber[activePlayer]).textContent = scores[activePlayer]
+        checkIfWin()
+    }
+})
+
+// Fonction de changement de nom
+function editNames() {
+    player1 = prompt("Change Player1 name");
+    player2 = prompt("Change player2 name");
+   
+    document.querySelector("h2.Player1").innerHTML = player1;
+    document.querySelector("h2.Player2").innerHTML = player2;
+}
+
+// verifier le joueur gagnant et  /  ou changer de joueur si c est pas le cas
+function checkIfWin() {
+
+  if (scores[activePlayer] >= 100) {
+      alert('Victoire du joueur ' + playerNumber[activePlayer]);
+      newGame();
+      return true;
+  } else {
+      nextPlayer();
+  }
 }
