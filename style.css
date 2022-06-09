@@ -110,7 +110,7 @@ h2 {
 }
 .center-game-fctns button {
   width: 320px;
-  margin-left: 24%;
+  margin-left: 22%;
 }
 /*--------------------------------MEDIUM DEVICES------------------------------*/
 @media screen and (max-width:1100px) {
@@ -162,18 +162,19 @@ h2 {
   .game-container {
     display: block;
   }
-  .dice > img {
-    margin: 3rem;
-    margin-left: 94%;
+  .center-game-fctns {
+    width: 100%;
   }
   .center-game-fctns button {
-    width: 248%;
-    margin-left: 3%;
+   width: 100%;
+   margin-left: 0.25rem;
   }
   .total-score-pl2, .total-score-pl1 {
     margin: 1rem;
     margin-top: 2rem;
-    margin-left: 40%;
+    width: 100%;
+    text-align: center;
+    margin-left: -0.1rem;
   }
   h2 {
     width: 90%;
