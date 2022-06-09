@@ -1,5 +1,5 @@
 // Initialisation des variables
-let playerNumber, activePlayer, scores, diceScore, inGame, currentScores;
+let scores, currentScores, activePlayer, diceScore, inGame, playerNumber;
 
 let player1 = "Player 1";
 let player2 = "Player 2";
@@ -24,6 +24,10 @@ function newGame() {
   document.getElementById('select-player-2').style.border= 'solid #fd4141 4px';
 }
 
+// fonction 'Nouvelle partie'
+document.getElementById('new-game').addEventListener('click', newGame);
+
+
 // RAZ des scores
 function resetScores() {
   diceScore = 0;
@@ -31,8 +35,6 @@ function resetScores() {
   document.getElementById('dice-result-1').textContent = 0
   document.getElementById('dice-result-2').textContent = 0
 }
-// Récupération du boutton et de la fonction 'Nouvelle partie'
-document.getElementById('new-game').addEventListener('click', newGame);
 
 // Fonction pour changer de joueur
 function nextPlayer(){
@@ -54,7 +56,7 @@ function nextPlayer(){
   return alert('Next player !')
 }
 
-// Recupration du boutton 'ROLL DICE'
+// Evenement sur 'ROLL DICE'
 document.getElementById('roll-dice').addEventListener('click', function() {
     if(inGame){
         diceScore = Math.trunc(Math.random() * 6 + 1)
@@ -71,7 +73,7 @@ document.getElementById('roll-dice').addEventListener('click', function() {
     }
 })
 
-// Recuperation de 'add-to-score'
+// Evenement sur 'add-to-score'
 document.getElementById('add-to-score').addEventListener('click', function(){
     if(inGame && currentScores[activePlayer] != 0){
         scores[activePlayer] += currentScores[activePlayer]

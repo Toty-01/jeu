@@ -17,7 +17,7 @@
 }
 button {
   position: relative;
-  box-shadow: 2px 6px #716e6e;
+  box-shadow: 3px 6px #716e6e;
   background: #ffffff;
 }
 .btn-top {
@@ -141,9 +141,9 @@ h2 {
     background-color: beige;
   }
   .btn-top {
-   width: 300px;
+   width: 100%;
    border-radius: 1rem;
-   margin-left: 2.1rem;
+   margin-left: 0.25rem;
    margin-top: 15px;
   }
   .center-game-fctns {
@@ -164,11 +164,11 @@ h2 {
   }
   .dice > img {
     margin: 3rem;
-    margin-left: 95%;
+    margin-left: 94%;
   }
   .center-game-fctns button {
-    width: 320px;
-    margin-left: 16%;
+    width: 340px;
+    margin-left: 8%;
   }
   .total-score-pl2, .total-score-pl1 {
     margin: 1rem;
