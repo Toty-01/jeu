@@ -7,6 +7,7 @@
   font-family: 'Fjalla One', sans-serif;
 }
 .game-body {
+  overflow-y: auto;
   border: solid 10px #fd4141;
   border-radius: .5rem;
   width: 95vw;
@@ -15,71 +16,21 @@
   margin-top: 2vh;
   background: beige;
 }
-button {
-  position: relative;
-  box-shadow: 3px 6px #716e6e;
-  background: #ffffff;
-}
-.btn-top {
-  margin-top: 2rem;
-  border-radius: 7px;
-  color: rgb(0, 0, 0);
-  font-size: 30px;
-  padding: 16px 25px;
-  cursor: pointer;
-  text-transform: uppercase;
-  margin-left: 41%;
+.png-btn {
+  width: 30px;
+  vertical-align: -6px;
 }
 .btn {
   border-radius: 10px;
   color: rgb(0, 0, 0);
-  font-size: 30px;
-  padding: 16px 25px;
-  cursor: pointer;
-  margin: 0.5rem;
+  font-size: 25px;
 }
-.png-btn {
-  width: 30px;
-  vertical-align: -4px;
-}
-.btn:hover, .btn-top:hover {
+.btn:hover {
   background: #fd4141;
   text-decoration: none;
   color: #ffffff;
-  box-shadow: 0 4px;
   top: 3px;
   left: 2px;
-}
-h2 {
-  text-align: center;
-  background-color: #000000;
-  border-radius: 1rem;
-  color: #ffffff;
-  padding: 16px 25px;
-  border: solid #fd4141 4px;
-}
-.game-container {
-  display: flex;
-}
-.total-score-pl2, .total-score-pl1 {
-  margin: 3rem;
-  margin-top: 8rem;
-  margin-left: 32%;
-  font-size: 4rem;
-  font-weight: lighter;
-}
-.play-1 {
-  position: relative;
-  float: left;
-  width: 20%;
-} 
-.play-2 {
-  position: relative;
-  width: 20%;
-}
-.Player1, .Player2 {
-  font-size: 2rem;
-  font-weight: lighter;
 }
 .Score-bottom {
   width: 120px;
@@ -88,112 +39,37 @@ h2 {
   border-radius: 0.6rem;
   padding: 1rem;
   text-transform: uppercase;
-  margin-top: 8rem;
-  margin-left: 25%;
-}
-.Score-bottom p {
-  text-align: center;
 }
 .current-score-pl2, .current-score-pl1{
   color: #ffffff;
   margin-top: 1rem;
   font-size: 1.8rem;
 }
-.center-game-fctns {
-  display: flex;
-  flex-direction: column;
-  width: 40%;
+.img-dice {
+  width: 100px;
 }
-.dice > img {
-  margin: 3rem;
-  margin-left: 41%;
+h2 {
+  font-size: 3rem;
+  font-weight: lighter;
+  background-color: #000000;
+  border-radius: 1rem;
+  color: #ffffff;
+  border: solid #fd4141 4px;
 }
-.center-game-fctns button {
-  width: 320px;
-  margin-left: 22%;
+.total-score-pl2, .total-score-pl1 {
+  color: red;
+  font-size: 4rem;
+  font-weight: lighter;
+} 
+.Score-bottom p {
+  text-align: center;
 }
-/*--------------------------------MEDIUM DEVICES------------------------------*/
-@media screen and (max-width:1100px) {
-  * {
-    overflow-y: visible;
-  }
-  .btn-top {
-    margin-left: 37%;
-  }
-  .dice > img {
-    margin: 3rem;
-    margin-left: 37%;
-  }
-  .center-game-fctns button {
-    width: 300px;
-    margin-left: 14%;
-  }
-  .game-container {
-    overflow-x: visible;
-  }
-}
-/*--------------------SMALL DEVICES-----------------------------*/
-@media screen and (max-width:500px) {
+
+@media screen and (max-width:450px) {
   *{
     overflow: visible;
   }
-  body {
-    background-color: beige;
-  }
-  .btn-top {
-   width: 100%;
-   border-radius: 1rem;
-   margin-left: 0.25rem;
-   margin-top: 15px;
-  }
-  .center-game-fctns {
-    display: block;
-    flex-direction: column;
-    width: 40%;
-  }
-  .game-body {
-    width: 98vw;
-    height: 98vh;
-    border: 0;
-    margin: 0;
+  .col {
     margin-bottom: 2rem;
-    background-color: beige;
-  }
-  .game-container {
-    display: block;
-  }
-  .center-game-fctns {
-    width: 100%;
-  }
-  .center-game-fctns button {
-   width: 100%;
-   margin-left: 0.25rem;
-  }
-  .total-score-pl2, .total-score-pl1 {
-    margin: 1rem;
-    margin-top: 2rem;
-    width: 100%;
-    text-align: center;
-    margin-left: -0.1rem;
-  }
-  h2 {
-    width: 90%;
-    margin-left: 5%;
-  }
-  .play-1, .play-2 {
-    position: relative;
-    float: left;
-    width: 102%;
-    margin-top: 2rem;
-  } 
-  .Score-bottom {
-    margin-top: 2rem;
-    margin-left: 35%;
-  }
-  .play-2 {
-    margin-bottom: 2rem;
-  }
-  h2 > p {
-    text-align: center;
   }
 }
