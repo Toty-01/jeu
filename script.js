@@ -29,7 +29,7 @@ document.getElementById('new-game').addEventListener('click', newGame);
 
 // fonction de regles
 document.getElementById('rules').addEventListener('click', function() {
-  alert("Lancer le dé ou sauvegarder votre score cumulé. Si vous faites un 1, le score sera remis à zéro et la main passera à l'adversaire. Bonne chance !!");
+  alert("Lancer le dé ou sauvegarder votre score cumulé. Si vous faites un 1, le score sera remis à zéro et la main passera à l'adversaire. Vous devez atteindre le score de 50 en premier. Bonne chance !!");
 })
 
 // RAZ des scores
