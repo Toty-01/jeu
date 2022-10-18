@@ -22,12 +22,15 @@ function newGame() {
   document.getElementById('select-player-1').style.border= 'solid blue 4px';
   document.getElementById('select-player-2').style.color = 'black';
   document.getElementById('select-player-2').style.border= 'solid #fd4141 4px';
-  return alert ('The first player at 50 win the game !')
 }
 
 // fonction 'Nouvelle partie'
 document.getElementById('new-game').addEventListener('click', newGame);
 
+// fonction de regles
+document.getElementById('rules').addEventListener('click', function() {
+  alert("Lancer le dé ou sauvegarder votre score cumulé. Si vous faites un 1, le score sera remis à zéro et la main passera à l'adversaire. Bonne chance !!");
+})
 
 // RAZ des scores
 function resetScores() {
@@ -38,7 +41,7 @@ function resetScores() {
 }
 
 // Fonction pour changer de joueur
-function nextPlayer(){
+function nextPlayer() {
   if (activePlayer === 0){
       activePlayer = 1
       resetScores()

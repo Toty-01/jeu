@@ -16,6 +16,9 @@
   margin-top: 2vh;
   background: beige;
 }
+#new-game {
+  margin-top: 5rem !important;
+}
 .png-btn {
   width: 30px;
   vertical-align: -6px;
@@ -65,7 +68,7 @@ h2 {
   text-align: center;
 }
 
-@media screen and (max-width:450px) {
+@media screen and (max-width:650px) {
   *{
     overflow: visible;
   }
@@ -79,6 +82,9 @@ h2 {
   }
   .row {
     display: block;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
   }
   .col {
     margin-bottom: 2rem;
