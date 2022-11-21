@@ -29,7 +29,7 @@ document.getElementById('new-game').addEventListener('click', newGame);
 
 // fonction de regles
 document.getElementById('rules').addEventListener('click', function() {
-  alert("Lancer le dé ou sauvegarder votre score cumulé. Si vous faites un 1, le score sera remis à zéro et la main passera à l'adversaire. Vous devez atteindre le score de 50 en premier. Bonne chance !!");
+  alert("Lancer le dé ou sauvegarder votre score cumulé. Si vous faites un 1, le score sera remis à zéro et la main passera à l'adversaire. Vous devez atteindre le score de 50 ou plus en premier. Bonne chance !!");
 })
 
 // RAZ des scores
@@ -89,9 +89,18 @@ document.getElementById('add-to-score').addEventListener('click', function(){
 // Fonction de changement de nom
 function editNames() {
     player1 = prompt("Change Player1 name");
-    player2 = prompt("Change player2 name");
-   
+    if (player1.length == 0) {
+    return alert("saisir au moins un caractère");
+    } else if (player1.length > 4) {
+    return alert("saisir moins de 4 caractères");
+    }
     document.querySelector("h2.Player1").innerHTML = player1;
+    player2 = prompt("Change player2 name");
+    if (player2.length == 0) {
+    return alert("saisir au moins un caractère");
+    } else if (player2.length > 4) {
+    return alert("saisir moins de 4 caractères");
+    }
     document.querySelector("h2.Player2").innerHTML = player2;
 }
 
