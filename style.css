@@ -17,7 +17,7 @@
   background: beige;
 }
 #new-game {
-  margin-top: 5rem !important;
+  margin-top: 5vh !important;
 }
 .png-btn {
   width: 30px;
@@ -29,6 +29,7 @@
   font-size: 25px;
 }
 .btn:hover {
+  transition: all 0.4s;
   background: #fd4141;
   text-decoration: none;
   color: #ffffff;
@@ -67,7 +68,9 @@ h2 {
 .Score-bottom p {
   text-align: center;
 }
-
+button > i {
+  margin-bottom: -0.25rem;
+}
 @media screen and (max-width:650px) {
   *{
     overflow: visible;

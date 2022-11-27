@@ -8,18 +8,19 @@
   sauvegardez votre score a temps car si le dé tombe sur le 1, c est à l autre joueur de lancer le dé et votre score n'est pas retenu. Bonne chance à vous !!">
   <link rel="stylesheet" href="bootstrap.css">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
   <title>Dice game</title>
 </head>
 <body>
 
 <div class="game-body">
 
-  <button class="btn btn-light shadow mx-auto p-3 mb-5 mx-auto d-block" type="button" id="new-game">
-    <img class="png-btn" src="./img/new-game.png" alt="">
+  <button class="btn btn-light shadow mx-auto p-3 mb-4 mx-auto d-block" type="button" id="new-game">
+    <i class="fa-solid fa-circle-plus"></i>
     NEW GAME
   </button>
 
-  <button type="button" class="btn btn-light d-block p-3 shadow mt-3 mx-auto mb-5" id="rules">
+  <button type="button" class="btn btn-light d-block p-3 shadow mt-2 mx-auto mb-3" id="rules">
     Rules
   </button>
 
@@ -40,17 +41,17 @@
         </div>
 
         <button type="button" class="btn btn-light d-block p-3 shadow mt-5 mx-auto" id="roll-dice">
-          <img class="png-btn" src="./img/roll-dice.png" alt="">
+          <i class="fa-solid fa-rotate"></i>
           ROLL DICE
         </button>
 
         <button type="button" class="btn btn-light d-block p-3 shadow mt-3 mx-auto" id="add-to-score">
-          <img class="png-btn" src="./img/save.png" alt="dé">
+          <i class="fa-solid fa-floppy-disk"></i>
           HOLD
         </button>
 
         <button type="button" class="btn btn-light d-block p-3 shadow mb-3 mt-3 mx-auto" onClick="editNames()">
-          <img class="png-btn" src="./img/edit.png" alt="dé">   
+          <i class="fa-regular fa-pen-to-square"></i>   
           EDIT NAMES
         </button>
       </div>
